@@ -37,15 +37,19 @@ There are many possibilities to create AAS:
     - https://twinfix.twinsphere.io/ 
     - https://github.com/admin-shell-io/aas-test-engines
 
-#### Hint: Transform AASX to Json-AAS/SM and vice versa
+#### Hint: Convert AASX to Json-AAS/SM and vice versa
 Right now there are 3 types of AAS specified: \
 ![Types of Information Exchange via Asset Administration Shells from IDTA](https://admin-shell-io.github.io/aas-specs-antora/IDTA-01001/v3.1/_images/3-aas-info-exchange-types.jpeg) \
 Type 1 = AASX file \
-Type 2 = API which returns (in most implementations) json
+Type 2 = API which returns (in most implementations) json \
+Type 3 = not relevant in this challenge
 
-Convert...
-- ...from AASX to AAS: Use the upload-endpoin of the BaSyx Environment to import AASX file. Then use the /shells and /submodels endpoint to get the AAS and Submodels as json
-- ...from AAS to AASX: Use the serialization-endpoint to get an AAS including Submodels as AASX file
+**Convert**...
+- ...from **AASX to AAS**: Use the (not standardized) upload-endpoint of the BaSyx Environment to import AASX file. Then use the /shells and /submodels endpoint to get the AAS and Submodels as json \
+https://wiki.basyx.org/en/latest/content/user_documentation/basyx_components/v2/aas_environment/features/upload.html
+- ...from **AAS to AASX**: Use the serialization-endpoint to get an AAS including Submodels as AASX file \
+https://app.swaggerhub.com/apis/Plattform_i40/AssetAdministrationShellRepositoryServiceSpecification/V3.0.2_SSP-001#/Serialization%20API/GenerateSerializationByIds
+
 ### PCF Calculator
 Workflow (simplyfied)
 1. Collect Energy Consumption Data
@@ -64,4 +68,4 @@ https://github.com/eclipse-mnestix
 - Submodel Digital Nameplate
 ![Mnestix Browser Digital Nameplate](images/Mnestix-Browser_DigitalNameplate.png)
 - Submodel Carbon Footprint
-![Mnestix Browser Carbon Footprint](images/Mnestix-Browser_CarbonFootprint.png)
+![Mnestix Browser Carbon Footprint](images/Mnestix-Browser_CarbonFootprint.png)>
