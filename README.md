@@ -15,7 +15,10 @@ You will get:
 - Mnestix API Swagger-UI: http://localhost:5064/swagger/index.html
 - BaSyx Environment API Swagger-UI: http://localhost:8081/swagger-ui/index.html
 
-### Needed Submodel Templates
+### Specifications
+AAS Metamodel & API: https://admin-shell-io.github.io/aas-specs-antora/index/home/index.html
+
+Submodel Templates 
 - Digital Nameplate: https://github.com/admin-shell-io/submodel-templates/tree/main/published/Digital%20nameplate/3/0
 - Carbon Footprint: https://github.com/admin-shell-io/submodel-templates/tree/main/published/Carbon%20Footprint/0/9
 
