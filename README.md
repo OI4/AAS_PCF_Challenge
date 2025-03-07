@@ -21,19 +21,38 @@ You will get:
 
 ### AAS Creator
 There are many possibilities to create AAS:
-- Creating a single AAS: Eclipse Package Explorer: https://github.com/eclipse-aaspe/package-explorer
+- Creating a single AAS: Eclipse Package Explorer: 
+    - https://github.com/eclipse-aaspe/package-explorer
+    - Video series on YouTube: https://www.youtube.com/playlist?list=PLCO0zeX96Ia3y-6DzA6DO_VcHnX758rc5    
 - Creating AAS simple by filling json-templates
     - Take the provided demo Submodels as a template a replace placeholders 
     - node-RED might be a good tool for starting: https://nodered.org/
 - Creating AAS with DataIngest-Endpoint of Mnestix-API
     - http://localhost:5064/swagger/index.html#/AasCreator
     - http://localhost:5064/swagger/index.html#/DataIngest/DataIngest_AddDataToAas
-    - Docs: https://hub.docker.com/r/mnestix/mnestix-api
+    - Documentation: https://hub.docker.com/r/mnestix/mnestix-api
 - Creating AAS programmatically with SDK:
     - BaSyx Python SDK: https://github.com/eclipse-basyx/basyx-python-sdk 
 - Validating created AAS:
     - https://twinfix.twinsphere.io/ 
     - https://github.com/admin-shell-io/aas-test-engines
+
+#### Hint: Transform AASX to Json-AAS/SM and vice versa
+Right now there are 3 types of AAS specified: \
+![Types of Information Exchange via Asset Administration Shells from IDTA](https://admin-shell-io.github.io/aas-specs-antora/IDTA-01001/v3.1/_images/3-aas-info-exchange-types.jpeg) \
+Type 1 = AASX file \
+Type 2 = API which returns (in most implementations) json
+
+Convert...
+- ...from AASX to AAS: Use the upload-endpoin of the BaSyx Environment to import AASX file. Then use the /shells and /submodels endpoint to get the AAS and Submodels as json
+- ...from AAS to AASX: Use the serialization-endpoint to get an AAS including Submodels as AASX file
+### PCF Calculator
+Workflow (simplyfied)
+1. Collect Energy Consumption Data
+2. Determine Emission Factor (e.g. https://app.electricitymaps.com)
+3. Calculate Carbon Footprint (Greenhouse Gas Protocol: https://ghgprotocol.org/)
+4. Normalize per Product Unit
+
 
 ### Grafana and Telegraf
 See: https://grafana.com/grafana/dashboards/928-telegraf-system-dashboard/?pg=dashboards&plcmt=featured-dashboard-4
