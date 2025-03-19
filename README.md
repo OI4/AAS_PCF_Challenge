@@ -5,6 +5,12 @@
 ![PCF Architectural Guardrail](images/Architecture_Guardrail.png)
 
 ### Your local AAS test environment: Mnestix Browser with BaSyx AAS Environment
+**Requirements**
+- Linux or WSL
+- Docker
+- Docker-Compose
+- Processor Architecture: amd64 (at the moment not all images are available for arm64 so you cannot run this demonstrator on your Raspberry Pi)
+
 Download this repository and run in your command line ```docker compose -f 'Mnestix\docker-compose.yaml' up```\
 Mnestix-API  publishes the Demo AAS on startup to the BaSyx AAS Environment.
 You will get:
@@ -63,6 +69,15 @@ Workflow (simplyfied)
 
 ### Grafana and Telegraf
 See: https://grafana.com/grafana/dashboards/928-telegraf-system-dashboard/?pg=dashboards&plcmt=featured-dashboard-4
+
+### Hardware to measure power consumption
+There is a lot of hardware available. 
+Here two options. Both measure the power consumption and provide the results via MQTT over WiFi and are easy to setup. 
+- Shelly Plug S Gen3 (230V): https://www.shelly.com/products/shelly-plug-s-gen3
+- Shelly Pro 3 EM (400V): https://www.shelly.com/de/products/shelly-pro-3em-x1
+
+Please note that the devices do not send the same payload. 
+The Shelly Plug S Gen3 for example sends the total consumed power, Shelly Pro 3 EM does not.
 
 ### Home of Mnestix
 https://github.com/eclipse-mnestix
